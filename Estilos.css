@@ -1,0 +1,57 @@
+body{
+  color: #181C23;
+  font-family: "Arial", "Lucida Grande", sans-serif;
+  }
+h1 ,h2,h3{
+
+  text-align: center;
+}
+
+.percent{
+
+text-align: center;
+
+margin-top: 5px;
+
+padding-top: 20px;
+}
+
+.menu-opcoes ul {
+    font-size: 15px;
+  }
+.menu-opcoes ul ol{
+      display: inline;
+      margin-left: 25px;
+      }
+.menu-opcoes{
+        margin-left: 286px;
+      }
+header{
+      position: relative;
+    }
+
+.labelChecked{
+
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+}
+.labelUnChecked{
+    border: 1px solid #003eff;
+    background: #007fff;
+    font-weight: normal;
+    color: #ffffff;
+}
+table{
+
+  align-items: center;
+    width      : 80%;  
+    text-align : center;
+    margin     : 0 auto;
+}
+p{
+
+  width      : 90%;  
+  text-align : center;
+}

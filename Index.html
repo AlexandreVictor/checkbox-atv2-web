@@ -1,0 +1,97 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script type="text/javascript" language ="javascript" 
+        src="jquery-3.2.1.min.js"></script>
+        <link   rel='stylesheet' type = 'text/css' href='Estilos.css'>
+    <title>Aprendendo Jquery</title>
+</head>
+    <body>
+        <h1>Estes são belos exemplos de JQuery</h1>
+        <h2 id="Cor">Selecione uma cor</h2>
+        <nav class="menu-opcoes">
+            <ul>
+                <ol><input type="radio" name="RadioName" value="blue"  id="RdBtn">
+                    <label class = "labelUnChecked" for="Azul">Cor:Azul</label></ol>
+                <ol><input type="radio" name="RadioName" value="red"   id="RdBtn"/>
+                    <label class = "labelUnChecked" for="Vermelha">Cor:Vermelha</label></ol>
+                <ol><input type="radio" name="RadioName" value="green" id="RdBtn"/>
+                    <label class = "labelUnChecked" for="Verde">Cor:Verde</label></ol>
+                <ol><input type="radio" name="RadioName" value="black" id="RdBtn" checked=true/>
+                    <label class = "labelUnChecked" for="Preto">Cor:Preto</label></ol>
+            </ul>
+        </nav>
+    <hr>
+        <h2>Exemplos de div</h2>
+    <button id = "div">Para Animar a DIV ,Clique-aqui</button>
+    <div id="div1">
+
+    </div>
+    <hr>
+        <h2>Exemplos de p</h2>
+    <p id="pss">Clique em mim, eu desapareço!</p>
+    <hr>
+    <h2>Exemplos de table</h2>
+    <button id="Hidetable">Para Animar a TABLE ,Clique-aqui</button>
+        <table border="1">
+            <th class="titulo">Tabela de Animações</th>
+            <th class="titulo">Animação</th>
+            <tr>
+                <td>Tabela</td>
+                <td>Mostrar e esconder as tabelas</td>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>Paragrafo desaparece</td>
+            </tr>
+            <tr>
+                <td>button</td>
+                <td>Carrega a barra de progresso</td>
+            </tr>
+            <tr>
+                <td>div</td>
+                <td>Barra de progresso</td>
+            </tr>
+            <tr>
+                <td>h2</td>
+                <td>Menu de Cores</td>
+            </tr>
+        </table>
+       
+               
+    <script>
+              $( "input" ).on( "click", function() {
+                $( "#Cor" ).css("color",$( "input:checked" ).val());
+              });
+              $(function(){
+                    $("#div").click(function(){
+                        let div = $("#div1");
+                        
+                        let collorbar = $( "input:checked" ).val();
+
+                        for(Tamanho = 0; Tamanho <= 100; Tamanho+=25){
+                           div.animate({height: '10%',width:Tamanho+'%', opacity: '0.7'}, "very slow");
+                           div.css("background",collorbar);
+                         }
+                    }),
+                    $("#pss").click(function(){
+                                    $("#pss").hide("slow", function(){
+                                         alert("Olá, estou aqui!");
+                                    });
+                    });
+                });
+                $(function(){
+                        $("#Hidetable").click(function(){
+                                $("table").toggle();
+                               
+                        });
+                });
+
+</script>
+
+</body>
+</html>
+
+
